@@ -3,248 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Dashboard</title>
   </head>
-  <body>
-    <div class="main-content">
-      <header class="header">
-        <h1 class="logo">YourApp</h1>
-        <div class="bell">
-          <img src="icons/icon-bell.svg" alt="Alert Notification Icon" />
-          <div id="notifications"></div>
+  <body class="grid-container">
+    <header class="header">
+      <h1 class="logo"><strong>Your</strong>App</h1>
+      <div class="bell">
+        <img src="icons/icon-bell.svg" alt="Alert Notification Icon" />
+        <div id="notifications"></div>
+      </div>
+      <img
+        class="profile-picture"
+        src="images/profile-image.jpeg"
+        alt="Profile Picture"
+      />
+      <h3 class="name">Austin Veatch</h3>
+    </header>
+    <!-- * End of Header -->
+    <nav class="nav">
+      <a href="#"
+        ><img src="icons/icon-dashboard.svg" alt="Dashboard Icon"
+      /></a>
+      <a href="#"><img src="icons/icon-members.svg" alt="Members Icon" /></a>
+      <a href="#"><img src="icons/icon-visits.svg" alt="Traffic Icon" /></a>
+      <a href="#"><img src="icons/icon-settings.svg" alt="Settings Icon" /></a>
+    </nav>
+
+    <!-- * End of Nav -->
+
+    <main>
+      <div class="main-head">
+        <h2 class="title">Dashboard</h2>
+        <div class="main-head-search">
+          <input type="search" placeholder="Search" />
         </div>
-        <img
-          class="profile-picture"
-          src="images/member-1.jpg"
-          alt="Profile Picture"
-        />
-        <h3 class="name">Austin Veatch</h3>
-      </header>
-      <!-- * End of Header -->
-      <nav class="nav">
-        <a href="#"
-          ><img src="icons/icon-dashboard.svg" alt="Dashboard Icon"
-        /></a>
-        <a href="#"><img src="icons/icon-members.svg" alt="Members Icon" /></a>
-        <a href="#"><img src="icons/icon-visits.svg" alt="Traffic Icon" /></a>
-        <a href="#"
-          ><img src="icons/icon-settings.svg" alt="Settings Icon"
-        /></a>
-      </nav>
+      </div>
 
-      <!-- * End of Nav -->
+      <!-- * JS Alert Bar -->
+      <div class="alert-bar" id="alert-bar"></div>
+      <!-- * --------------->
 
-      <main>
-        <div class="main-head">
-          <h2 class="title">Dashboard</h2>
-          <div class="main-head-search">
-            <input type="search" placeholder="Search" />
+      <section class="traffic">
+        <div class="traffic-head">
+          <h3>Traffic</h3>
+          <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link active">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+          </ul>
+        </div>
+        <div class="traffic-widget-large">
+          <!-- * Attached Line Graph -->
+          <canvas id="traffic-graph"></canvas>
+        </div>
+      </section>
+
+      <!-- * End of Traffic -->
+
+      <section class="daily">
+        <h3>Daily Traffic</h3>
+        <div class="traffic-widget-small">
+          <canvas id="daily-graph"></canvas>
+        </div>
+      </section>
+
+      <!-- * End of Daily Traffic -->
+
+      <section class="mobile">
+        <h3>Mobile Users</h3>
+        <div class="traffic-widget-small">
+          <canvas id="mobile-graph"></canvas>
+        </div>
+      </section>
+
+      <!-- * End of Mobile Users -->
+
+      <section class="social">
+        <h3>Social Stats</h3>
+        <div class="twitter">
+          <div class="social-icon"></div>
+          <div class="social-text">
+            <p>Twitter</p>
+            <p>10,345</p>
           </div>
         </div>
-
-        <!-- * JS Alert Bar -->
-        <div class="alert-bar" id="alert-bar"></div>
-        <!-- * --------------->
-
-        <section class="traffic">
-          <div class="traffic-head">
-            <h3>Traffic</h3>
-            <ul class="traffic-nav">
-              <li class="traffic-nav-link">Hourly</li>
-              <li class="traffic-nav-link">Daily</li>
-              <li class="traffic-nav-link active">Weekly</li>
-              <li class="traffic-nav-link">Monthly</li>
-            </ul>
+        <div class="facebook">
+          <div class="social-icon"></div>
+          <div class="social-text">
+            <p>Facebook</p>
+            <p>8,739</p>
           </div>
-          <div class="traffic-widget-large">
-            <!-- * Attached Line Graph -->
-            <canvas id="traffic-graph"></canvas>
+        </div>
+        <div class="google">
+          <div class="social-icon"></div>
+          <div class="social-text">
+            <p>Google+</p>
+            <p>2,530</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- * End of Traffic -->
+      <!-- * End of Social -->
 
-        <section class="daily">
-          <h3>Daily Traffic</h3>
-          <div class="traffic-widget-small">
-            <canvas id="daily-graph"></canvas>
+      <section class="new-members">
+        <h3>New Members</h3>
+
+        <div class="member-container">
+          <img src="images/member-1.jpg" alt="Photo of Member One" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
-        </section>
+          <p>date</p>
+        </div>
 
-        <!-- * End of Daily Traffic -->
-
-        <section class="mobile">
-          <h3>Mobile Users</h3>
-          <div class="traffic-widget-small">
-            <canvas id="mobile-graph"></canvas>
+        <div class="member-container">
+          <img src="images/member-2.jpg" alt="Photo of Member Two" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
-        </section>
+          <p>date</p>
+        </div>
 
-        <!-- * End of Mobile Users -->
-
-        <section class="social">
-          <h3>Social Stats</h3>
-          <div class="twitter">
-            <div class="social-icon"></div>
-            <div class="social-text">
-              <p>Twitter</p>
-              <p>10,345</p>
-            </div>
+        <div class="member-container">
+          <img src="images/member-3.jpg" alt="Photo of Member Three" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
-          <div class="facebook">
-            <div class="social-icon"></div>
-            <div class="social-text">
-              <p>Facebook</p>
-              <p>8,739</p>
-            </div>
+          <p>date</p>
+        </div>
+
+        <div class="member-container">
+          <img src="images/member-4.jpg" alt="Photo of Member Four" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
-          <div class="google">
-            <div class="social-icon"></div>
-            <div class="social-text">
-              <p>Google+</p>
-              <p>2,530</p>
-            </div>
+          <p>date</p>
+        </div>
+      </section>
+
+      <!-- * End of New Members -->
+
+      <section class="recent-activity">
+        <h3>Recent Activity</h3>
+
+        <div class="activity-container">
+          <img src="images/member-1.jpg" alt="Photo of Member One" />
+          <div class="activity-text">
+            <p>Comment/Activity</p>
+            <p>Time/Date</p>
           </div>
-        </section>
+          <p>arrow</p>
+        </div>
 
-        <!-- * End of Social -->
-
-        <section class="new-members">
-          <h3>New Members</h3>
-
-          <div class="member-container">
-            <img src="images/member-1.jpg" alt="Photo of Member One" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>date</p>
+        <div class="member-container">
+          <img src="images/member-2.jpg" alt="Photo of Member Two" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
+          <p>arrow</p>
+        </div>
 
-          <div class="member-container">
-            <img src="images/member-2.jpg" alt="Photo of Member Two" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>date</p>
+        <div class="member-container">
+          <img src="images/member-3.jpg" alt="Photo of Member Three" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
+          <p>arrow</p>
+        </div>
 
-          <div class="member-container">
-            <img src="images/member-3.jpg" alt="Photo of Member Three" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>date</p>
+        <div class="member-container">
+          <img src="images/member-4.jpg" alt="Photo of Member Four" />
+          <div class="member-text">
+            <p>Name</p>
+            <a href="#">test@testtesttest.com</a>
           </div>
+          <p>arrow</p>
+        </div>
+      </section>
 
-          <div class="member-container">
-            <img src="images/member-4.jpg" alt="Photo of Member Four" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>date</p>
-          </div>
-        </section>
+      <!-- * End of Recent Activity -->
 
-        <!-- * End of New Members -->
+      <section class="messaging">
+        <h3>Message User</h3>
+        <form class="message-form">
+          <input
+            type="text"
+            class="message-search"
+            id="message-search"
+            placeholder="Search for user"
+          />
+          <textarea
+            class="message-text"
+            id="message-text"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button class="send" id="send">Send</button>
+        </form>
+      </section>
 
-        <section class="recent-activity">
-          <h3>Recent Activity</h3>
+      <!-- * End of Recent Activity -->
 
-          <div class="activity-container">
-            <img src="images/member-1.jpg" alt="Photo of Member One" />
-            <div class="activity-text">
-              <p>Comment/Activity</p>
-              <p>Time/Date</p>
-            </div>
-            <p>arrow</p>
-          </div>
+      <section class="settings">
+        <h3>Settings</h3>
 
-          <div class="member-container">
-            <img src="images/member-2.jpg" alt="Photo of Member Two" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>arrow</p>
-          </div>
+        <!-- * Two Custom Toggles -->
+        <!-- * Two Custom Toggles -->
 
-          <div class="member-container">
-            <img src="images/member-3.jpg" alt="Photo of Member Three" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>arrow</p>
-          </div>
-
-          <div class="member-container">
-            <img src="images/member-4.jpg" alt="Photo of Member Four" />
-            <div class="member-text">
-              <p>Name</p>
-              <a href="#">test@testtesttest.com</a>
-            </div>
-            <p>arrow</p>
-          </div>
-        </section>
-
-        <!-- * End of Recent Activity -->
-
-        <section class="messaging">
-          <h3>Message User</h3>
-          <form class="message-form">
-            <input
-              type="text"
-              class="message-search"
-              id="message-search"
-              placeholder="Search for user"
-            />
-            <textarea
-              class="message-text"
-              id="message-text"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <button class="send" id="send">Send</button>
-          </form>
-        </section>
-
-        <!-- * End of Recent Activity -->
-
-        <section class="settings">
-          <h3>Settings</h3>
-
-          <!-- * Two Custom Toggles -->
-          <!-- * Two Custom Toggles -->
-
-          <select id="timezone" class="timezone">
-            <option disabled selected>Select a Timezone</option>
-            <option value="Pacific">Pacific</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Central">Central</option>
-            <option value="Eastern">Eastern</option>
-          </select>
-          <div class="settings-buttons">
-            <button
-              class="button-save"
-              id="save
+        <select id="timezone" class="timezone">
+          <option disabled selected>Select a Timezone</option>
+          <option value="Pacific">Pacific</option>
+          <option value="Mountain">Mountain</option>
+          <option value="Central">Central</option>
+          <option value="Eastern">Eastern</option>
+        </select>
+        <div class="settings-buttons">
+          <button
+            class="button-save"
+            id="save
             "
-            >
-              Save
-            </button>
-            <button
-              class="button-cancel"
-              id="cancel
+          >
+            Save
+          </button>
+          <button
+            class="button-cancel"
+            id="cancel
             "
-            >
-              Cancel
-            </button>
-          </div>
-        </section>
-      </main>
-    </div>
+          >
+            Cancel
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
