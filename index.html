@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">YourApp</h1>
+      <div class="bell">
+        <img src="icons/icon-bell.svg" alt="Alert Notification Icon" />
+        <div id="notifications"></div>
+      </div>
+      <img
+        class="profile-picture"
+        src="images/member-1.jpg"
+        alt="Profile Picture"
+      />
+      <h3 class="name">Austin Veatch</h3>
+    </header>
+    <!-- * End of Header -->
+    <nav class="nav">
+      <a href="#"
+        ><img src="icons/icon-dashboard.svg" alt="Dashboard Icon"
+      /></a>
+      <a href="#"><img src="icons/icon-members.svg" alt="Members Icon" /></a>
+      <a href="#"><img src="icons/icon-visits.svg" alt="Traffic Icon" /></a>
+      <a href="#"><img src="icons/icon-settings.svg" alt="Settings Icon" /></a>
+    </nav>
+    <!-- * End of Nav -->
+    <main>
+      <div class="main-head">
+        <h2 class="title">Dashboard</h2>
+        <div class="main-head-search">
+          <input type="search" placeholder="Search" />
+        </div>
+      </div>
+
+      <!-- * JS Alert Bar -->
+      <div class="alert-bar" id="alert-bar"></div>
+      <!-- * --------------->
+
+      <div class="traffic">
+        <div class="traffic-head">
+          <h3>Traffic</h3>
+          <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link active">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+          </ul>
+        </div>
+        <div class="traffic-widget">
+          <!-- * Attached Line Graph -->
+          <canvas id="traffic-graph"></canvas>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
