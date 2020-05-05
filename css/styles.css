@@ -206,7 +206,7 @@ h2 {
 .social {
   grid-area: social;
   flex-wrap: wrap;
-  height: 200px;
+  height: 500px;
   border-bottom: 1px solid lightgrey;
   justify-content: flex-start;
   align-items: center;
@@ -219,25 +219,59 @@ h2 {
 }
 .social-cells {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: #7578bf;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 10px;
 }
 .twitter,
 .facebook,
 .google {
-  width: 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
   background-color: rgb(243, 243, 243);
   margin: 0 15px 35px;
   border: 1px solid lightgrey;
   border-radius: 3px;
 }
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7377bf;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 15px;
+}
+.social-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.social-text {
+  color: #7578bf;
+  font-size: 0.9em;
+  margin-right: 80px;
+}
+.social-text p:nth-of-type(1) {
+  margin-bottom: 5px;
+}
+
+.social-count {
+  color: rgb(139, 139, 139);
+  font-size: 2.5em;
+  font-weight: 100;
+  margin: 0 0 20px 35px;
+}
 
 .new-members {
   grid-area: new-members;
 }
+
 .recent-activity {
   grid-area: recent-activity;
 }
