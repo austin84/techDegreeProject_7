@@ -4,6 +4,7 @@
 }
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
 /* Header */
@@ -19,31 +20,57 @@ body {
   color: white;
 }
 .logo {
+  font-weight: 100;
   margin-left: 20px;
   margin-right: auto;
 }
 .profile-picture {
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   margin-right: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .name {
-  opacity: 70%;
-  font-size: 0.8em;
+  opacity: 80%;
+  font-size: 1em;
   margin-right: 15px;
 }
+.bell {
+  padding: 5px 10px;
+  border-right: 2px solid rgb(66, 2, 66);
+}
+
+.bell img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ! Styling the Header for mobile ^^^^ */
+
 /* Nav */
 
 .nav {
   grid-area: nav;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d4c72;
+}
+.nav img {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px;
 }
 
 /* Main */
 
 .main {
   grid-area: main;
+  display: grid;
 }
 
 .grid-container {
