@@ -271,10 +271,66 @@ h2 {
 .new-members {
   grid-area: new-members;
 }
-
 .recent-activity {
   grid-area: recent-activity;
 }
+
+.new-members,
+.recent-activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 5px;
+}
+.new-members h3,
+.recent-activity h3 {
+  align-self: flex-start;
+  margin-left: 20px;
+}
+.member-container,
+.activity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 15px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.member-container:last-child,
+.activity-container:last-child {
+  border: none;
+}
+.member-container img,
+.activity-container img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+.member-container p,
+.activity-container p {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 100;
+  color: rgb(83, 83, 83);
+  opacity: 0.7;
+}
+.member-text {
+  margin-right: auto;
+}
+
+.member-text p {
+  margin: 0;
+}
+.member-text a {
+  text-decoration: none;
+  color: #7377bf;
+  opacity: 0.8;
+  font-size: 0.8em;
+}
+
 .messaging {
   grid-area: messaging;
 }
