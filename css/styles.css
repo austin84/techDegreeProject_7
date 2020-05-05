@@ -22,7 +22,7 @@ h2 {
     "main";
 }
 
-/* Header */
+/* * Header */
 
 .header {
   grid-area: header;
@@ -61,7 +61,7 @@ h2 {
   height: 30px;
 }
 
-/* Nav */
+/* * Nav */
 
 .nav {
   grid-area: nav;
@@ -79,7 +79,7 @@ h2 {
   margin: 0 15px;
 }
 
-/* Main */
+/* * Main */
 
 .main {
   grid-area: main;
@@ -115,6 +115,8 @@ h2 {
   width: 100%;
 }
 
+/* * Main Conatiner Header */
+
 .main-head {
   grid-area: main-head;
   height: 55px;
@@ -144,6 +146,8 @@ h2 {
   box-sizing: border-box;
 }
 
+/* * Alert Bar */
+
 .alert-bar {
   grid-area: alert-bar;
   width: 100%;
@@ -153,6 +157,9 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
+/* * Traffic Graph */
+
 .traffic {
   grid-area: traffic;
   flex-wrap: wrap;
@@ -187,6 +194,8 @@ h2 {
   width: 100%;
 }
 
+/* * Daily Traffic */
+
 .daily {
   grid-area: daily;
   height: 250px;
@@ -195,6 +204,8 @@ h2 {
 .daily h3 {
   margin-left: 20px;
 }
+
+/* * Mobile Traffic */
 .mobile {
   grid-area: mobile;
   height: 250px;
@@ -203,6 +214,9 @@ h2 {
 .mobile h3 {
   margin-left: 20px;
 }
+
+/* * Social Traffic */
+
 .social {
   grid-area: social;
   flex-wrap: wrap;
@@ -268,6 +282,8 @@ h2 {
   margin: 0 0 20px 35px;
 }
 
+/* * New Members & Recent Activity */
+
 .new-members {
   grid-area: new-members;
 }
@@ -332,6 +348,8 @@ h2 {
   font-size: 0.8em;
 }
 
+/* * Messaging */
+
 .messaging {
   grid-area: messaging;
   border-bottom: 1px solid lightgrey;
@@ -371,6 +389,8 @@ h2 {
   border-radius: 5px;
   margin: 10px 0 20px;
 }
+
+/* * Settings */
 
 .settings {
   grid-area: settings;
@@ -414,3 +434,65 @@ select:valid {
   font-weight: bold;
   border-radius: 5px;
 }
+
+/* * **MEDIA QUERIES** * */
+
+@media (min-width: 768px) {
+  h2,
+  h3 {
+    color: #b2b2b2;
+    font-weight: 300;
+  }
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main";
+  }
+  .nav {
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .nav img {
+    width: 30px;
+    height: 30px;
+    margin: 20px 0;
+    opacity: 0.7;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-head,
+  .traffic,
+  .social,
+  .alert-bar {
+    grid-column: 1 / span 2;
+  }
+  .daily,
+  .new-members,
+  .messaging {
+    /* width: 50%; */
+    grid-column: 1 / span 1;
+  }
+  .mobile,
+  .recent-activity,
+  .settings {
+    /* width: 50%; */
+    grid-column: 2 / span 1;
+  }
+}
+.social {
+  height: 250px;
+}
+.social-cells {
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* ! Working on the 768 media query ^^^^
+/* ! Strggling to get two cells side by side
