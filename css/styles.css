@@ -7,6 +7,20 @@ body {
   font-family: sans-serif;
 }
 
+h2 {
+  font-size: 1em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
+}
+
 /* Header */
 
 .header {
@@ -38,7 +52,7 @@ body {
 }
 .bell {
   padding: 5px 10px;
-  border-right: 2px solid rgb(66, 2, 66);
+  border-right: 2px solid rgb(66, 2, 66, 75);
 }
 
 .bell img {
@@ -53,7 +67,7 @@ body {
 .nav {
   grid-area: nav;
   width: 100%;
-  height: 75px;
+  height: 55px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,15 +84,125 @@ body {
 
 .main {
   grid-area: main;
-  display: grid;
-}
-
-.grid-container {
+  width: 100%;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas:
-    "header"
-    "nav"
-    "main";
+    "main-head"
+    "alert-bar"
+    "traffic"
+    "daily"
+    "mobile"
+    "social"
+    "new-members"
+    "recent-activity"
+    "messaging"
+    "settings";
+}
+
+.main-head,
+.alert-bar,
+.traffic,
+.traffic-head,
+.daily,
+.mobile,
+.social,
+.new-members,
+.recent-activity,
+.messaging,
+.settings {
+  display: flex;
+}
+
+.main-head {
+  grid-area: main-head;
+  height: 65px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.title {
+  margin: 10px 20px;
+  font-size: 1.4em;
+}
+.main-head-search {
+  display: flex;
+  background-color: lightgrey;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main-head-search input {
+  width: 400px;
+  height: 35px;
+  padding: 15px;
+}
+
+/* ! Working on styling the main-head       ^^^^^^^^^     */
+
+.alert-bar {
+  grid-area: alert-bar;
+  width: 100%;
+  height: 25px;
+  margin: 10px 40px;
+  background-color: #7377bf;
+  justify-self: center;
+  align-self: center;
+}
+.traffic {
+  grid-area: traffic;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 350px;
+  border-bottom: 1px solid lightgrey;
+}
+.traffic-head {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 20px;
+}
+
+.traffic-nav {
+  display: flex;
+  list-style: none;
+  font-size: 0.8em;
+}
+
+.traffic-nav-link {
+  padding: 5px 10px;
+}
+.active {
+  background-color: #81c98f;
+  border-radius: 30px;
+  color: white;
+}
+
+.traffic-widget-large {
+  width: 100%;
+}
+
+.daily {
+  grid-area: daily;
+}
+.mobile {
+  grid-area: mobile;
+}
+.social {
+  grid-area: social;
+}
+.new-members {
+  grid-area: new-members;
+}
+.recent-activity {
+  grid-area: recent-activity;
+}
+.messaging {
+  grid-area: messaging;
+}
+.settings {
+  grid-area: settings;
 }
