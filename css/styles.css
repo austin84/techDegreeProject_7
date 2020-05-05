@@ -4,6 +4,7 @@
 }
 body {
   margin: 0;
+  width: 100%;
   font-family: sans-serif;
 }
 
@@ -60,8 +61,6 @@ h2 {
   height: 30px;
 }
 
-/* ! Styling the Header for mobile ^^^^ */
-
 /* Nav */
 
 .nav {
@@ -113,11 +112,13 @@ h2 {
 .messaging,
 .settings {
   display: flex;
+  width: 100%;
 }
 
 .main-head {
   grid-area: main-head;
-  height: 65px;
+  height: 55px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin: 0;
@@ -134,33 +135,34 @@ h2 {
   margin: 0;
   justify-content: flex-end;
   align-items: center;
+  border-radius: 0 0 0 10px;
 }
 .main-head-search input {
-  width: 400px;
-  height: 35px;
-  padding: 15px;
+  width: 80%;
+  padding: 20px 12px;
+  margin: 0 10px 0 100px;
+  box-sizing: border-box;
 }
-
-/* ! Working on styling the main-head       ^^^^^^^^^     */
 
 .alert-bar {
   grid-area: alert-bar;
   width: 100%;
-  height: 25px;
-  margin: 10px 40px;
+  height: 35px;
+  margin: 15px 0;
   background-color: #7377bf;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 .traffic {
   grid-area: traffic;
   flex-wrap: wrap;
   width: 100%;
-  height: 350px;
+  height: 250px;
   border-bottom: 1px solid lightgrey;
 }
 .traffic-head {
   width: 100%;
+  height: 80px;
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 20px;
@@ -187,13 +189,52 @@ h2 {
 
 .daily {
   grid-area: daily;
+  height: 250px;
+  border-bottom: 1px solid lightgrey;
+}
+.daily h3 {
+  margin-left: 20px;
 }
 .mobile {
   grid-area: mobile;
+  height: 250px;
+  border-bottom: 1px solid lightgrey;
+}
+.mobile h3 {
+  margin-left: 20px;
 }
 .social {
   grid-area: social;
+  flex-wrap: wrap;
+  height: 200px;
+  border-bottom: 1px solid lightgrey;
+  justify-content: flex-start;
+  align-items: center;
 }
+.social h3 {
+  align-self: flex-start;
+  width: 100%;
+  flex-basis: 100%;
+  margin-left: 20px;
+}
+.social-cells {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #7578bf;
+  margin-bottom: 10px;
+}
+.twitter,
+.facebook,
+.google {
+  width: 27%;
+  background-color: rgb(243, 243, 243);
+  margin: 0 15px 35px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
 .new-members {
   grid-area: new-members;
 }
