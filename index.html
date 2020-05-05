@@ -274,13 +274,14 @@
             type="text"
             class="message-search"
             id="message-search"
-            placeholder="Search for user"
+            placeholder="Search for User"
           />
           <textarea
             class="message-text"
             id="message-text"
             cols="30"
             rows="10"
+            placeholder="Message for User"
           ></textarea>
           <button class="send" id="send">Send</button>
         </form>
@@ -291,11 +292,15 @@
       <section class="settings">
         <h3>Settings</h3>
 
+        <p>Send Email Notifications</p>
+        <span></span>
         <!-- * Two Custom Toggles -->
+        <p>Send Profile to Public</p>
+        <span></span>
         <!-- * Two Custom Toggles -->
 
-        <select id="timezone" class="timezone">
-          <option disabled selected>Select a Timezone</option>
+        <select id="timezone" class="timezone" required>
+          <option disabled selected value="">Select a Timezone</option>
           <option value="Pacific">Pacific</option>
           <option value="Mountain">Mountain</option>
           <option value="Central">Central</option>
