@@ -143,7 +143,6 @@ h2 {
   width: 80%;
   padding: 20px 12px;
   margin: 0 10px 0 100px;
-  box-sizing: border-box;
 }
 
 /* * Alert Bar */
@@ -190,8 +189,9 @@ h2 {
   color: white;
 }
 
-.traffic-widget-large {
-  width: 100%;
+.widget-container-large,
+.widget-container-small {
+  width: 95vw;
 }
 
 /* * Daily Traffic */
@@ -220,7 +220,7 @@ h2 {
 .social {
   grid-area: social;
   flex-wrap: wrap;
-  height: 500px;
+  height: auto;
   border-bottom: 1px solid lightgrey;
   justify-content: flex-start;
   align-items: center;
@@ -438,10 +438,16 @@ select:valid {
 /* * **MEDIA QUERIES** * */
 
 @media (min-width: 768px) {
+  body {
+    width: 100vw;
+  }
   h2,
   h3 {
     color: #b2b2b2;
     font-weight: 300;
+  }
+  .name {
+    color: white;
   }
   .grid-container {
     grid-template-columns: 55px 1fr;
@@ -463,36 +469,128 @@ select:valid {
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "main-head main-head"
+      "alert-bar alert-bar"
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "new-members recent-activity"
+      "messaging settings";
   }
-  .main-head,
-  .traffic,
-  .social,
+  .main-head {
+    grid-area: main-head;
+  }
+  .main-head-search input {
+    width: 35%;
+  }
+  .traffic {
+    grid-area: traffic;
+  }
+  .widget-container-large {
+    width: 90vw;
+  }
+  .widget-container-small {
+    width: 45vw;
+  }
+  .social {
+    grid-area: social;
+    height: auto;
+    width: 100%;
+  }
   .alert-bar {
-    grid-column: 1 / span 2;
+    grid-area: alert-bar;
   }
-  .daily,
-  .new-members,
+  .daily {
+    grid-area: daily;
+    border-right: 1px solid lightgrey;
+  }
+  .new-members {
+    grid-area: new-members;
+    border-right: 1px solid lightgrey;
+  }
   .messaging {
-    /* width: 50%; */
-    grid-column: 1 / span 1;
+    grid-area: messaging;
+    border-right: 1px solid lightgrey;
   }
-  .mobile,
-  .recent-activity,
+  .mobile {
+    grid-area: mobile;
+  }
+  .recent-activity {
+    grid-area: recent-activity;
+  }
   .settings {
-    /* width: 50%; */
-    grid-column: 2 / span 1;
+    grid-area: settings;
+    justify-content: space-between;
   }
+  .settings-buttons {
+    margin-bottom: 20px;
+  }
+
+  .social-cells {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .twitter,
+  .facebook,
+  .google {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .social-text {
+    font-size: 0.7em;
+    margin-right: 30px;
+  }
+
+  .social-count {
+    font-size: 2em;
+    margin-left: 5px;
+  }
+
+  /* ! Currently woirking on the two column layout, 
+   /* !  i believe the .social container is cause /* ! the viewport to be different then the width. I /* ! am losing responsivity. it also could be not the social part */
+
+  /* 
+  
+
+  .twitter,
+  .facebook,
+  .google {
+    width: 26%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7377bf;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .social-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social-text {
+    color: #7578bf;
+    font-size: 0.9em;
+    margin-right: 40px;
+  }
+  .social-text p:nth-of-type(1) {
+    font-size: 0.8em;
+  }
+
+  .social-count {
+    color: rgb(139, 139, 139);
+    font-size: 2.2em;
+    font-weight: 100;
+    margin: 0 0 10px 0;
+  } */
 }
-.social {
-  height: 250px;
-}
-.social-cells {
-  flex-direction: row;
-  margin-bottom: 30px;
-}
-
-
-
-
-/* ! Working on the 768 media query ^^^^
-/* ! Strggling to get two cells side by side
