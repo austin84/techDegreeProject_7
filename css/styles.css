@@ -128,6 +128,13 @@ h2 {
   display: flex;
   max-width: 100%;
 }
+.daily,
+.mobile,
+.messaging,
+.recent-activity {
+  display: flex;
+  flex-direction: column;
+}
 
 /* * Main Conatiner Header */
 
@@ -149,21 +156,21 @@ h2 {
   width: 100%;
   height: 100%;
   margin: 0;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 0 0 0 10px;
 }
 .main-head-search input {
   width: 80%;
-  padding: 20px 12px;
-  margin: 0 10px 0 100px;
+  padding: 5px 12px;
+  margin: 0 30px 0 100px;
 }
 
 /* * Alert Bar */
 
 .alert-bar {
   grid-area: alert-bar;
-  width: 60%;
+  width: 90%;
   height: 35px;
   margin: 15px 0;
   background-color: #7377bf;
@@ -239,7 +246,7 @@ h2 {
 
   height: auto;
   border-bottom: 1px solid lightgrey;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .social h3 {
@@ -505,6 +512,7 @@ select:valid {
   }
   .main-head-search input {
     width: 35%;
+    margin-right: 50px;
   }
   .traffic {
     grid-area: traffic;
