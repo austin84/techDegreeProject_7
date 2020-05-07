@@ -46,7 +46,6 @@ var trafficLineGraph = new Chart(tlg, {
           1750,
           2250,
         ],
-
         pointStyle: "triangle",
         pointBackgroundColor: ["rgb(255, 255, 255)"],
         pointBorderColor: ["#7377BF"],
