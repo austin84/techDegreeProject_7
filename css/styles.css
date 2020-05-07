@@ -712,14 +712,25 @@ h2 {
 .settings h3 {
   margin-left: 20px;
 }
-.settings p {
+/* .settings p {
   margin: 15px 0 15px 20px;
-}
+} */
 #timezone {
   width: 91%;
   height: 35px;
   align-self: center;
   margin-top: 20px;
+}
+
+.settings div {
+  align-self: center;
+  display: grid;
+  height: 40px;
+  grid-template-columns: 180px 85px;
+}
+.settings p,
+.settings label {
+  align-self: center;
 }
 
 select:valid {
@@ -867,7 +878,12 @@ select:valid {
     font-size: 2em;
     margin-left: 5px;
   }
+  .settings div {
+    align-self: flex-start;
+    margin-left: 40px;
 }
+
+
 
 @media (min-width: 1024px) {
   .twitter,
@@ -875,4 +891,8 @@ select:valid {
   .google {
     width: 28%;
   }
+  .settings div {
+    align-self: center;
+    margin-left: 40px;
+}
 }

@@ -188,3 +188,26 @@ var trafficLineGraph = new Chart(mdc, {
     },
   },
 });
+
+// * Messaging
+
+const user = document.getElementById("message-search");
+const message = document.getElementById("message-text");
+const send = document.getElementById("send");
+
+send.addEventListener("click", (e) => {
+  if (user.value === "" && message.value === "") {
+    event.preventDefault();
+    alert("Please fill out user and message fields before sending");
+  } else if (user.value === "") {
+    event.preventDefault();
+    alert("Please fill out user field before sending");
+  } else if (message.value === "") {
+    event.preventDefault();
+    alert("Please fill out message field before sending");
+  } else {
+    event.preventDefault();
+    alert(`Message successfully sent to: ${user.value}`);
+    location.reload();
+  }
+});

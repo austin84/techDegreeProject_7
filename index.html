@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Dashboard</title>
   </head>
@@ -297,16 +298,36 @@
         </form>
       </section>
 
-      <!-- * End of Recent Activity -->
+      <!-- * End of Messaging -->
 
       <section class="settings">
         <h3>Settings</h3>
 
-        <p>Send Email Notifications</p>
-        <span></span>
+          <div>
+          <p>Send Email Notifications</p>
+          <label class="switch-light switch-material" onclick="">
+            <input type="checkbox">
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
+        
+        
         <!-- * Two Custom Toggles -->
-        <p>Send Profile to Public</p>
-        <span></span>
+        <div>
+        <p>Set Profile to Public</p>
+        <label class="switch-light switch-material" onclick="">
+          <input type="checkbox">
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+      </div>
         <!-- * Two Custom Toggles -->
 
         <select id="timezone" class="timezone" required>
