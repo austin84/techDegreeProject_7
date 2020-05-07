@@ -44,7 +44,13 @@
 
       <!-- * JS Alert Bar -->
       <section class="alert-bar">
-        <div id="alert-bar"></div>
+        <div id="alert-bar" class="alerted">
+          <p>
+            <span><strong>Alert </strong></span> Three (3) graphs/charts have
+            been refreshed with current data.
+          </p>
+          <a href="#" id="alert-close"><p>X</p></a>
+        </div>
       </section>
       <!-- * --------------->
 
@@ -234,7 +240,7 @@
             <p>Britta Perry commented on Meow Meow Beans' Privacy Policy</p>
             <p>4 hours ago</p>
           </div>
-          <p>arrow</p>
+          <p id="arrow">></p>
         </div>
 
         <div class="activity-container">
@@ -243,7 +249,7 @@
             <p>Troy Barnes gave Garret 4 Meow Meow Beans</p>
             <p>4 hours ago</p>
           </div>
-          <p>arrow</p>
+          <p id="arrow">></p>
         </div>
 
         <div class="activity-container">
@@ -254,7 +260,7 @@
             </p>
             <p>5 hours ago</p>
           </div>
-          <p>arrow</p>
+          <p id="arrow">></p>
         </div>
 
         <div class="activity-container">
@@ -263,7 +269,7 @@
             <p>Pierce Hawthorne Disliked Meow Meow Bean's Privacy Policy</p>
             <p>6 hour ago</p>
           </div>
-          <p>arrow</p>
+          <p id="arrow">></p>
         </div>
       </section>
 
@@ -326,6 +332,7 @@
         </div>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

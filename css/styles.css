@@ -383,7 +383,8 @@ h2 {
 .daily,
 .mobile,
 .messaging,
-.recent-activity {
+.recent-activity,
+.traffic {
   display: flex;
   flex-direction: column;
 }
@@ -422,7 +423,7 @@ h2 {
 
 .alert-bar {
   grid-area: alert-bar;
-  width: 90%;
+  width: 95%;
   height: 35px;
   margin: 15px 0;
   background-color: white;
@@ -436,14 +437,35 @@ h2 {
   height: 100%;
   margin: 0;
 }
+.alerted {
+  display: flex;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #7377bf;
+  font-size: 0.8em;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.alerted span {
+  margin-right: 8px;
+}
+#alert-close {
+  font-weight: 900;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: auto;
+  text-decoration: none;
+}
 
 /* * Traffic Graph */
 
 .traffic {
   grid-area: traffic;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
-  height: 250px;
+  height: auto;
   border-bottom: 1px solid lightgrey;
 }
 .traffic-head {
@@ -472,13 +494,14 @@ h2 {
 .widget-container-large,
 .widget-container-small {
   width: 95vw;
+  margin: 20px 0;
 }
 
 /* * Daily Traffic */
 
 .daily {
   grid-area: daily;
-  height: 250px;
+  height: auto;
   border-bottom: 1px solid lightgrey;
 }
 .daily h3 {
@@ -488,7 +511,7 @@ h2 {
 /* * Mobile Traffic */
 .mobile {
   grid-area: mobile;
-  height: 250px;
+  height: auto;
   border-bottom: 1px solid lightgrey;
 }
 .mobile h3 {
@@ -627,6 +650,11 @@ h2 {
   color: #7377bf;
   opacity: 0.8;
   font-size: 0.8em;
+}
+
+#arrow {
+  color: #7377bf;
+  font-size: 1.2em;
 }
 
 /* * Messaging */
@@ -778,7 +806,7 @@ select:valid {
     width: 90vw;
   }
   .widget-container-small {
-    width: 45vw;
+    width: 44vw;
   }
   .social {
     grid-area: social;
