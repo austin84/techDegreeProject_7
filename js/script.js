@@ -46,9 +46,33 @@ var trafficLineGraph = new Chart(tlg, {
           1750,
           2250,
         ],
-        pointStyle: "triangle",
-        pointBackgroundColor: ["rgb(255, 255, 255)"],
-        pointBorderColor: ["#7377BF"],
+        pointStyle: "circle",
+        pointBackgroundColor: [
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+        ],
+        pointBorderColor: [
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+        ],
         pointRadius: 6,
         backgroundColor: ["rgba(116, 119, 191, .3)"],
         borderColor: ["#7377BF"],
@@ -59,14 +83,8 @@ var trafficLineGraph = new Chart(tlg, {
   },
   options: {
     aspectRatio: 2.5,
-    animation: {
-      duration: 0,
-    },
     responsive: true,
     scales: {
-      gridLines: {
-        offsetGridLines: true,
-      },
       yAxes: [
         {
           ticks: {
@@ -92,13 +110,30 @@ var dailyBarChart = new Chart(dbc, {
     datasets: [
       {
         data: [75, 115, 175, 125, 225, 200, 100],
-        backgroundColor: ["#7377BF"],
-        borderColor: ["#7377BF"],
+        backgroundColor: [
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+        ],
+        borderColor: [
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+          "#7377BF",
+        ],
         borderWidth: 1,
       },
     ],
   },
   options: {
+    responsive: true,
     legend: {
       display: false,
     },
@@ -132,6 +167,7 @@ var trafficLineGraph = new Chart(mdc, {
     ],
   },
   options: {
+    responsive: true,
     legend: {
       position: "right",
       labels: {
