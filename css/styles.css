@@ -722,7 +722,7 @@ h2 {
   margin-top: 20px;
 }
 
-.settings div {
+.toggle {
   align-self: center;
   display: grid;
   height: 40px;
@@ -737,10 +737,12 @@ select:valid {
   color: rgb(211, 211, 211);
 }
 .settings-buttons {
+  align-self: center;
+  width: 90%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  margin: 12px 0 60px;
+  margin: 0;
 }
 .button-save {
   background-color: #7377bf;
@@ -878,21 +880,20 @@ select:valid {
     font-size: 2em;
     margin-left: 5px;
   }
-  .settings div {
+  .toggle {
     align-self: flex-start;
     margin-left: 40px;
-}
-
-
-
-@media (min-width: 1024px) {
-  .twitter,
-  .facebook,
-  .google {
-    width: 28%;
   }
-  .settings div {
-    align-self: center;
-    margin-left: 40px;
-}
+
+  @media (min-width: 1024px) {
+    .twitter,
+    .facebook,
+    .google {
+      width: 28%;
+    }
+    .toggle {
+      align-self: center;
+      margin-left: 40px;
+    }
+  }
 }
