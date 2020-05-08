@@ -26,9 +26,13 @@ const trafficLinks = document.getElementsByClassName("traffic-nav-link");
 //
 
 function addData(chart, label, data) {
-  chart.data.labels.push(label);
+  chart.data.labels = [];
+  chart.data.datasets.data = [];
   chart.data.datasets.forEach((dataset) => {
-    dataset.data.push(data);
+    dataset.data = data;
+  });
+  label.forEach((lab) => {
+    chart.data.labels.push(lab);
   });
   chart.update();
 }
@@ -59,24 +63,24 @@ let mDataset = monthlyTrafficData.datasets[0];
 //
 const trafficListener = () => {
   trafficNav.addEventListener("click", (e) => {
-    let foo = e.target.textContent;
-    foo = foo.toLowerCase();
+    let click = e.target.textContent;
+    click = click.toLowerCase();
     for (let i = 0; i < trafficLinks.length; i++) {
       trafficLinks[i].classList.remove("active");
     }
-    if (foo == "hourly") {
+    if (click == "hourly") {
       e.target.classList.toggle("active");
       addData(trafficLineGraph, hLabels, hData, hDataset);
       removeData(trafficLineGraph, hDataset);
-    } else if (foo == "daily") {
+    } else if (click == "daily") {
       e.target.classList.toggle("active");
       addData(trafficLineGraph, dLabels, dData, dDataset);
       removeData(trafficLineGraph, dDataset);
-    } else if (foo == "weekly") {
+    } else if (click == "weekly") {
       e.target.classList.toggle("active");
       addData(trafficLineGraph, wLabels, wData, wDataset);
       removeData(trafficLineGraph, hDataset);
-    } else if (foo == "monthly") {
+    } else if (click == "monthly") {
       e.target.classList.toggle("active");
       addData(trafficLineGraph, mLabels, mData, mDataset);
       removeData(trafficLineGraph, mDataset);
@@ -157,3 +161,5 @@ const notifications = () => {
 };
 
 notifications();
+
+// * Auto-Complete
