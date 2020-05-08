@@ -23,7 +23,40 @@ var trafficLineGraph = new Chart(tlg, object);
 
 const trafficNav = document.querySelector(".traffic-nav");
 const trafficLinks = document.getElementsByClassName("traffic-nav-link");
+//
 
+function addData(chart, label, data) {
+  chart.data.labels.push(label);
+  chart.data.datasets.forEach((dataset) => {
+    dataset.data.push(data);
+  });
+  chart.update();
+}
+
+function removeData(chart) {
+  chart.data.labels.pop();
+  chart.data.datasets.forEach((dataset) => {
+    dataset.data.pop();
+  });
+  chart.update();
+}
+
+let hLabels = hourlyTrafficData.labels;
+let dLabels = dailyTrafficData.labels;
+let wLabels = weeklyTrafficData.labels;
+let mLabels = monthlyTrafficData.labels;
+
+let hData = hourlyTrafficData.datasets[0].data;
+let dData = dailyTrafficData.datasets[0].data;
+let wData = weeklyTrafficData.datasets[0].data;
+let mData = monthlyTrafficData.datasets[0].data;
+
+let hDataset = hourlyTrafficData.datasets[0];
+let dDataset = dailyTrafficData.datasets[0];
+let wDataset = weeklyTrafficData.datasets[0];
+let mDataset = monthlyTrafficData.datasets[0];
+
+//
 const trafficListener = () => {
   trafficNav.addEventListener("click", (e) => {
     let foo = e.target.textContent;
@@ -33,14 +66,20 @@ const trafficListener = () => {
     }
     if (foo == "hourly") {
       e.target.classList.toggle("active");
-      object.type = "bar";
-      trafficLineGraph.update();
+      addData(trafficLineGraph, hLabels, hData, hDataset);
+      removeData(trafficLineGraph, hDataset);
     } else if (foo == "daily") {
       e.target.classList.toggle("active");
+      addData(trafficLineGraph, dLabels, dData, dDataset);
+      removeData(trafficLineGraph, dDataset);
     } else if (foo == "weekly") {
       e.target.classList.toggle("active");
+      addData(trafficLineGraph, wLabels, wData, wDataset);
+      removeData(trafficLineGraph, hDataset);
     } else if (foo == "monthly") {
       e.target.classList.toggle("active");
+      addData(trafficLineGraph, mLabels, mData, mDataset);
+      removeData(trafficLineGraph, mDataset);
     }
   });
 };
