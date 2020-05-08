@@ -239,3 +239,5 @@ const notifications = () => {
 };
 
 notifications();
+
+// ! working on getting the close button to work more than once, could move on to traffic nav ^^^^^^^^^^^
