@@ -10,6 +10,24 @@ function closeAlertListener() {
 }
 closeAlertListener();
 
+// * Daily Chart
+var dbc = document.getElementById("daily-graph").getContext("2d");
+
+var dailyBarChart = new Chart(dbc, {
+  type: "bar",
+  data: dailyData,
+  options: dailyOptions,
+});
+
+// * Mobile Chart
+var mdc = document.getElementById("mobile-graph").getContext("2d");
+
+var trafficLineGraph = new Chart(mdc, {
+  type: "doughnut",
+  data: mobileData,
+  options: mobileOptions,
+});
+
 // * Traffic Chart
 var tlg = document.getElementById("traffic-graph").getContext("2d");
 
@@ -39,9 +57,7 @@ function addData(chart, label, data) {
 
 function removeData(chart) {
   chart.data.labels.pop();
-  chart.data.datasets.forEach((dataset) => {
-    dataset.data.pop();
-  });
+  dataset.data.pop();
   chart.update();
 }
 
@@ -89,25 +105,6 @@ const trafficListener = () => {
 };
 
 trafficListener();
-// *
-
-// * Daily Chart
-var dbc = document.getElementById("daily-graph").getContext("2d");
-
-var dailyBarChart = new Chart(dbc, {
-  type: "bar",
-  data: dailyData,
-  options: dailyOptions,
-});
-
-// * Mobile Chart
-var mdc = document.getElementById("mobile-graph").getContext("2d");
-
-var trafficLineGraph = new Chart(mdc, {
-  type: "doughnut",
-  data: mobileData,
-  options: mobileOptions,
-});
 
 // * Messaging
 const user = document.getElementById("message-search");
@@ -163,3 +160,81 @@ const notifications = () => {
 notifications();
 
 // * Auto-Complete
+
+const instance = new PickleComplate({
+  data: [
+    {
+      value: "Britta Perry",
+      text: "Britta Perry",
+    },
+    {
+      value: "Troy Barnes",
+      text: "Troy Barnes",
+    },
+    {
+      value: "Annie Edison",
+      text: "Annie Edison",
+    },
+    {
+      value: "Pierce Hawthorne",
+      text: "Pierce Hawthorne",
+    },
+    {
+      value: "Jeff Winger",
+      text: "Jeff Winger",
+    },
+    {
+      value: "Abed Nadir",
+      text: "Abed Nadir",
+    },
+    {
+      value: "Ben Chang",
+      text: "Ben Chang",
+    },
+    {
+      value: "Shirley Bennet",
+      text: "Shirley Bennet",
+    },
+    {
+      value: "Craig Pelton",
+      text: "Craig Pelton",
+    },
+    {
+      value: "Ian Duncan",
+      text: "Ian Duncan",
+    },
+    {
+      value: "Magnitude",
+      text: "Magnitude",
+    },
+    {
+      value: "Star-Burns",
+      text: "Star-Burns",
+    },
+    {
+      value: "Leaonard Rodriguez",
+      text: "Leaonard Rodriguez",
+    },
+    {
+      value: "Garrett Lambert",
+      text: "Garrett Lambert",
+    },
+    {
+      value: "Kickpuncher",
+      text: "Kickpuncher",
+    },
+    {
+      value: "Inspector Spacetime",
+      text: "Inspector Spacetime",
+    },
+  ],
+  config: {
+    type: "local",
+    target: ".message-form",
+    clickCallback: (target, node) => {
+      target.value = node.value;
+    },
+  },
+});
+
+// * Local Storage

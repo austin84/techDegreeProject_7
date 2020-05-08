@@ -727,6 +727,9 @@ h2 {
 .messaging h3 {
   margin-left: 20px;
 }
+/* #message-search {
+  position: relative;
+} */
 #message-search,
 #message-text,
 #timezone {
@@ -764,9 +767,7 @@ h2 {
 .settings h3 {
   margin-left: 20px;
 }
-/* .settings p {
-  margin: 15px 0 15px 20px;
-} */
+
 #timezone {
   width: 91%;
   height: 35px;
@@ -785,7 +786,7 @@ h2 {
   align-self: center;
 }
 
-select:valid {
+select:invalid {
   color: rgb(211, 211, 211);
 }
 .settings-buttons {
