@@ -1,5 +1,102 @@
 // ! Traffic Chart Data
 
+let hourlyTrafficData = {
+  labels: [
+    "12am-2am",
+    "2am-4am",
+    "4am-6am",
+    "6am-8am",
+    "8am-10am",
+    "10am-12pm",
+    "12pm-2pm",
+    "2pm-4pm",
+    "4pm-6pm",
+    "6pm-8pm",
+    "8pm-10pm",
+    "10pm-12am",
+  ],
+  datasets: [
+    {
+      data: [11, 10, 9, 13, 16, 14, 18, 20, 16, 18, 15, 14, 12, 11],
+      pointStyle: "circle",
+      pointBackgroundColor: [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+      ],
+      pointBorderColor: [
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+      ],
+      pointRadius: 6,
+      backgroundColor: ["rgba(116, 119, 191, .3)"],
+      borderColor: ["#7377BF"],
+      borderWidth: 1,
+      lineTension: 0,
+    },
+  ],
+};
+
+let dailyTrafficData = {
+  labels: [
+    "Apr. 25",
+    "Apr. 26",
+    "Apr. 27",
+    "Apr. 28",
+    "Apr. 29",
+    "Apr. 30",
+    "May 1",
+  ],
+  datasets: [
+    {
+      data: [268, 286, 310, 302, 291, 334, 367],
+      pointStyle: "circle",
+      pointBackgroundColor: [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+      ],
+      pointBorderColor: [
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+      ],
+      pointRadius: 6,
+      backgroundColor: ["rgba(116, 119, 191, .3)"],
+      borderColor: ["#7377BF"],
+      borderWidth: 1,
+      lineTension: 0,
+    },
+  ],
+};
+
 let weeklyTrafficData = {
   labels: [
     "16-22",
@@ -67,9 +164,80 @@ let weeklyTrafficData = {
   ],
 };
 
+let monthlyTrafficData = {
+  labels: [
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+    "January",
+    "February",
+    "March",
+    "April",
+  ],
+  datasets: [
+    {
+      data: [
+        4432,
+        3455,
+        5102,
+        4322,
+        6785,
+        7855,
+        6011,
+        6654,
+        7034,
+        6899,
+        9165,
+        7010,
+        9003,
+        8945,
+      ],
+      pointStyle: "circle",
+      pointBackgroundColor: [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+      ],
+      pointBorderColor: [
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+        "#7377BF",
+      ],
+      pointRadius: 6,
+      backgroundColor: ["rgba(116, 119, 191, .3)"],
+      borderColor: ["#7377BF"],
+      borderWidth: 1,
+      lineTension: 0,
+    },
+  ],
+};
+
 // ! Traffic Chart Options
 
-let weeklyTrafficOptions = {
+let trafficOptions = {
   aspectRatio: 2.5,
   responsive: true,
   scales: {
@@ -77,6 +245,7 @@ let weeklyTrafficOptions = {
       {
         ticks: {
           beginAtZero: true,
+          maxTicksLimit: 13,
         },
       },
     ],

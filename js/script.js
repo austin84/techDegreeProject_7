@@ -13,14 +13,39 @@ closeAlertListener();
 // * Traffic Chart
 var tlg = document.getElementById("traffic-graph").getContext("2d");
 
-var trafficLineGraph = new Chart(tlg, {
+var object = {
   type: "line",
   data: weeklyTrafficData,
-  options: weeklyTrafficOptions,
-});
+  options: trafficOptions,
+};
 
-//* li manipulation below
+var trafficLineGraph = new Chart(tlg, object);
 
+const trafficNav = document.querySelector(".traffic-nav");
+const trafficLinks = document.getElementsByClassName("traffic-nav-link");
+
+const trafficListener = () => {
+  trafficNav.addEventListener("click", (e) => {
+    let foo = e.target.textContent;
+    foo = foo.toLowerCase();
+    for (let i = 0; i < trafficLinks.length; i++) {
+      trafficLinks[i].classList.remove("active");
+    }
+    if (foo == "hourly") {
+      e.target.classList.toggle("active");
+      object.type = "bar";
+      trafficLineGraph.update();
+    } else if (foo == "daily") {
+      e.target.classList.toggle("active");
+    } else if (foo == "weekly") {
+      e.target.classList.toggle("active");
+    } else if (foo == "monthly") {
+      e.target.classList.toggle("active");
+    }
+  });
+};
+
+trafficListener();
 // *
 
 // * Daily Chart
