@@ -15,6 +15,7 @@ let checkbox1 = document.getElementById("checkbox1");
 let checkbox2 = document.getElementById("checkbox2");
 let timezone = document.getElementById("timezone");
 let saveButton = document.getElementById("save");
+let cancelButton = document.getElementById("cancel");
 saveButton.addEventListener("click", (e) => {
   const cb1 = checkbox1.checked;
   const cb2 = checkbox2.checked;
@@ -23,6 +24,20 @@ saveButton.addEventListener("click", (e) => {
   localStorage.setItem("checkbox2", cb2);
   localStorage.setItem("timezone", tz);
 });
+
+cancelButton.addEventListener("click", (e) => {
+  localStorage.clear();
+  let cb1 = checkbox1.checked;
+  let cb2 = checkbox2.checked;
+  if (cb1) {
+    checkbox1.checked = false;
+  }
+  if (cb2) {
+    checkbox2.checked = false;
+  }
+  timezone.value = "";
+});
+
 function restoreSettings() {
   let cb1 = localStorage.getItem("checkbox1") === "true";
   let cb2 = localStorage.getItem("checkbox2") === "true";
