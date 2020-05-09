@@ -10,6 +10,33 @@ function closeAlertListener() {
 }
 closeAlertListener();
 
+// * Local Storage
+let checkbox1 = document.getElementById("checkbox1");
+let checkbox2 = document.getElementById("checkbox2");
+let timezone = document.getElementById("timezone");
+let saveButton = document.getElementById("save");
+saveButton.addEventListener("click", (e) => {
+  const cb1 = checkbox1.checked;
+  const cb2 = checkbox2.checked;
+  const tz = timezone.value;
+  localStorage.setItem("checkbox1", cb1);
+  localStorage.setItem("checkbox2", cb2);
+  localStorage.setItem("timezone", tz);
+});
+function restoreSettings() {
+  let cb1 = localStorage.getItem("checkbox1") === "true";
+  let cb2 = localStorage.getItem("checkbox2") === "true";
+  let tz = localStorage.getItem("timezone");
+  if (cb1) {
+    checkbox1.setAttribute("checked", true);
+  }
+  if (cb2) {
+    checkbox2.setAttribute("checked", true);
+  }
+  timezone.value = tz;
+}
+window.onload = restoreSettings();
+
 // * Daily Chart
 var dbc = document.getElementById("daily-graph").getContext("2d");
 
@@ -236,5 +263,3 @@ const instance = new PickleComplate({
     },
   },
 });
-
-// * Local Storage

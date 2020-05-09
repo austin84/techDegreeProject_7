@@ -68,7 +68,7 @@ let dailyTrafficData = {
   ],
   datasets: [
     {
-      data: [268, 286, 310, 302, 291, 334, 367],
+      data: [75, 115, 175, 125, 225, 200, 100],
       pointStyle: "circle",
       pointBackgroundColor: [
         "rgb(255, 255, 255)",
