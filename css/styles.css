@@ -692,6 +692,11 @@ h2 {
   color: rgb(83, 83, 83);
   opacity: 0.7;
 }
+
+.arrow {
+  color: #7377bf !important;
+  font-size: 1.2em !important;
+}
 .member-text {
   margin-right: auto;
 }
@@ -704,11 +709,6 @@ h2 {
   color: #7377bf;
   opacity: 0.8;
   font-size: 0.8em;
-}
-
-#arrow {
-  color: #7377bf;
-  font-size: 1.2em;
 }
 
 /* * Messaging */

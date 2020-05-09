@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
-    <link  rel="stylesheet" href="css/picomplete.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css"
+    />
+    <link rel="stylesheet" href="css/picomplete.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Dashboard</title>
   </head>
   <body class="grid-container">
     <header class="header">
       <h1 class="logo">
-        <strong>Meow Meow </strong><em>Beenz</em><sup><small>&trade;</sup></small>
+        <strong>Meow Meow </strong><em>Beenz</em
+        ><sup><small>&trade;</small></sup>
       </h1>
-
-      <!-- ! Dropdown -->
-
+      <!-- * Dropdown -->
       <div class="dropdown">
         <div class="bell">
           <img src="icons/icon-bell.svg" alt="Alert Notification Icon" />
@@ -25,9 +28,9 @@
           <p id="not1">Pierce Hawthorne Has Given You 2 Meow Meow Beenz</p>
           <p id="not2">Shirley Bennet Upgraded You To 4 Meow Meow Beenz</p>
           <div class="notification-buttons">
-          <button id="notification-clear">Clear</button>
-          <button id="notification-close">Close</button>
-        </div>
+            <button id="notification-clear">Clear</button>
+            <button id="notification-close">Close</button>
+          </div>
         </div>
       </div>
       <div class="profile">
@@ -62,14 +65,13 @@
       <!-- * JS Alert Bar -->
       <section class="alert-bar">
         <div id="alert-bar" class="alerted">
-          <p>
+          <h4>
             <span><strong>Alert </strong></span> Three (3) graphs/charts have
             been refreshed with current data.
-          </p>
+          </h4>
           <a href="#" id="alert-close"><p>X</p></a>
         </div>
       </section>
-      <!-- * --------------->
 
       <section class="traffic">
         <div class="traffic-head">
@@ -257,7 +259,7 @@
             <p>Britta Perry commented on Meow Meow Beenz's Privacy Policy</p>
             <p>4 hours ago</p>
           </div>
-          <p id="arrow">></p>
+          <p class="arrow">></p>
         </div>
 
         <div class="activity-container">
@@ -266,7 +268,7 @@
             <p>Troy Barnes gave Garret 4 Meow Meow Beenz</p>
             <p>4 hours ago</p>
           </div>
-          <p id="arrow">></p>
+          <p class="arrow">></p>
         </div>
 
         <div class="activity-container">
@@ -277,7 +279,7 @@
             </p>
             <p>5 hours ago</p>
           </div>
-          <p id="arrow">></p>
+          <p class="arrow">></p>
         </div>
 
         <div class="activity-container">
@@ -286,7 +288,7 @@
             <p>Pierce Hawthorne Disliked Meow Meow Beenz's Privacy Policy</p>
             <p>6 hour ago</p>
           </div>
-          <p id="arrow">></p>
+          <p class="arrow">></p>
         </div>
       </section>
 
@@ -297,7 +299,7 @@
         <form class="message-form" autocomplete="off">
           <input
             type="text"
-            class="message-search "
+            class="message-search"
             id="message-search"
             name="language"
             placeholder="Search for User"
@@ -318,11 +320,10 @@
       <section class="settings">
         <h3>Settings</h3>
 
-          <div class="toggle">
+        <div class="toggle">
           <p>Send Email Notifications</p>
           <label class="switch-light switch-material" onclick="">
-            <input id="checkbox1" 
-            type="checkbox">
+            <input id="checkbox1" type="checkbox" />
             <span>
               <span>Off</span>
               <span>On</span>
@@ -330,21 +331,18 @@
             </span>
           </label>
         </div>
-        
-        
 
         <div class="toggle">
-        <p>Set Profile to Public</p>
-        <label class="switch-light switch-material" onclick="">
-          <input id="checkbox2" type="checkbox">
-          <span>
-            <span>Off</span>
-            <span>On</span>
-            <a></a>
-          </span>
-        </label>
-      </div>
-
+          <p>Set Profile to Public</p>
+          <label class="switch-light switch-material" onclick="">
+            <input id="checkbox2" type="checkbox" />
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
 
         <select id="timezone" class="timezone" required>
           <option disabled selected value="">Select a Timezone</option>
@@ -354,26 +352,19 @@
           <option value="Eastern">Eastern</option>
         </select>
         <div class="settings-buttons">
-          <button
-            class="button-save"
-            id="save">
+          <button class="button-save" id="save">
             Save
           </button>
-          <button
-            class="button-cancel"
-            id="cancel
-            "
-          >
+          <button class="button-cancel" id="cancel">
             Cancel
           </button>
         </div>
       </section>
     </main>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="js/chart-data.js"></script>
     <script src="js/picomplete.js"></script>
     <script src="js/script.js"></script>
-    
   </body>
 </html>
